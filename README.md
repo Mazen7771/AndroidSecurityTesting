@@ -1,119 +1,174 @@
- HEAD
-
-# AndroidSecurityTesting
-An advanced Android Security Testing Suite with GUI (PyQt5) for ethical penetration testing, device analysis, and learning Android security techniques.
-
 # 🔐 AndroidSecurityTesting
 
-An advanced **Android Security Testing Suite** built with **Python + PyQt5**.  
-This project provides a graphical interface for interacting with Android devices via **ADB** for **ethical security testing, learning, and research**.
+## 📌 Overview
+**AndroidSecurityTesting** is a comprehensive security assessment toolkit designed for **Android application penetration testing** and **security analysis**.  
+It provides a **unified GUI-based interface** for malware scanning, APK analysis, network security testing, web vulnerability checks, and system reconnaissance.
 
-> ⚠️ **DISCLAIMER**  
-> This tool is intended **ONLY** for devices and applications you own or have **explicit permission** to test.  
-> Any illegal or unauthorized use is strictly forbidden.
-
----
-
-## ✨ Features
-
-- 🖥️ Modern GUI built with **PyQt5**
-- 📱 Android device detection via **ADB**
-- 🔌 USB connection monitoring
-- 📦 List connected Android devices
-- 🧩 Modular & clean architecture
-- 🎨 Icon-based interface
-- 🛡️ Designed for **Android security testing**
+> ⚠️ This project is intended for **ethical hacking, educational, and authorized security testing only**.
 
 ---
 
-## 🖥️ Supported OS
+## 🚀 Features
 
-- Kali Linux (recommended)
-- Other Linux distributions
+### 🧩 Core Modules
 
----
+#### 1️⃣ Virus Scanner & Malware Detection
+- Local signature-based malware scanning
+- VirusTotal API integration (API key required)
+- Detailed scan reports and threat analysis
 
-## ⚙️ Requirements
+#### 2️⃣ Android APK Analyzer
+- APK permissions analysis
+- Suspicious behavior detection
+- Component enumeration:
+  - Activities
+  - Services
+  - Broadcast Receivers
+- Full functionality requires **androguard**
 
-- Python **3.9+**
-- Android device
-- USB cable
-- **USB Debugging enabled**
-- System ADB installed
+#### 3️⃣ Network Security Testing
+- Network discovery & scanning
+- Port scanning
+- Service fingerprinting
 
-## Install ADB:
-```bash
-sudo apt install adb
+#### 4️⃣ Web Application Security
+- Basic web vulnerability scanning
+- HTTP request inspection
+- Common vulnerability detection
 
----
-
-## 📦 Python Dependencies
-
-adb_shell==0.4.4
-certifi==2025.11.12
-cffi==2.0.0
-charset-normalizer==3.4.4
-cryptography==46.0.3
-idna==3.11
-pure-python-adb==0.3.0.dev0
-pyasn1==0.6.1
-pycparser==2.23
-PyQt5==5.15.11
-PyQt5-Qt5==5.15.18
-PyQt5_sip==12.17.2
-requests==2.32.5
-rsa==4.9.1
-urllib3==2.6.2
+#### 5️⃣ System Information Gathering
+- Device & OS information
+- Security posture analysis
+- Configuration inspection
 
 ---
 
-## nstall dependencies:
-pip install -r requirements.txt
+## 🖥️ GUI Interface
+- Built with **PyQt5**
+- Tab-based navigation
+- Real-time progress indicators
+- Detailed result visualization
+- Exportable security reports
 
 ---
 
-## USB Setup (Important)
+## 📦 Requirements
 
-# On your Android phone:
+### ✅ Core Dependencies
+PyQt5
+qtawesome
+requests
+androguard
+colorama
+tqdm
+tabulate
+paramiko
+cryptography
+beautifulsoup4
+selenium
+python-nmap
+scapy
+pyshark
+dnspython
+lxml
+xmltodict
+jsonpath-ng
+pyyaml
+jinja2
+python-whois
+ipwhois
 
-1. Enable Developer Options
 
-2. Enable USB Debugging
+### ⭐ Optional Dependencies (Advanced Features)
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+kaleido
+psutil
+python-magic
+yara-python
+volatility3
+pefile
+capstone
+keystone-engine
+unicorn
+frida
+frida-tools
+objection
+mobsf
+quark-engine
+malwoverview
+vt-py
+pyattck
+stix2
+taxii2-client
 
-3. Set USB mode to:
 
-4. File Transfer (MTP)
+---
 
-# Verify connection:
+## ⚙️ Installation
 
-adb devices
+### 🐍 Virtual Environment (Recommended)
 
-# You should see your device listed.
+python3 -m venv venv
+source venv/bin/activate   # Linux / Mac
+# venv\Scripts\activate    # Windows
+pip3 install -r requirements.txt
 
+## Direct Installation
+pip3 install PyQt5 qtawesome requests androguard colorama tqdm tabulate paramiko cryptography beautifulsoup4 selenium python-nmap scapy pyshark dnspython lxml xmltodict jsonpath-ng pyyaml jinja2 python-whois ipwhois
 
-## Run the Tool:
+## Usage
+# Running the Application
+# Navigate to the project directory
+cd AndroidSecurityTesting
+
+# Run the main application
 python3 src/main.py
+ ## Module-Specific Usage
+ 
+    Virus Scanner Tab: Upload files for malware scanning
+    Android Analyzer Tab: Analyze APK files for security issues
+    Network Scanner Tab: Perform network discovery and scanning
+    Web Tools Tab: Conduct web application security testing
+    System Tools Tab: Gather system information and perform checks
+## Configuration
+# Settings File
+The application stores settings in exploitation_settings.json:
 
----
+    VirusTotal API key for enhanced scanning
+    Default file paths
+    Scan preferences
+# API Integration
+To use VirusTotal integration:
 
-## 🔒 Ethical Use Notice
+    Register at https://www.virustotal.com/
+    Obtain an API key
+    Add the key in the Settings tab
 
-This project is for:
-- Learning Android security
-- Testing your own devices
-- Authorized penetration testing
+## Security Features
+# Data Protection
 
-❌ Do NOT use on:
-- Other people's phones
-- Apps you don’t own
-- Any illegal activity
+    All scanning is performed locally first
+    API keys are stored securely
+    No data uploaded without explicit user consent
+    Secure handling of sensitive information
+## Code Structure
+AndroidSecurityTesting/
+├── src/
+│   ├── main.py                 # Main application entry point
+│   ├── modules/                # Individual security modules
+│   │   ├── __init__.py
+│   │   ├── exploitation_tools.py
+│   │   ├── network_scanner.py
+│   │   ├── web_scanner.py
+│   │   ├── system_tools.py
+│   │   └── utils.py
+│   └── ui/                     # UI components
+├── requirements.txt            # Dependencies list
+├── README.md                   # This file
+└── exploitation_settings.json  # User settings
 
----
 
-## 👨‍💻 Author
-
-**Mazin**  
-Android Security Researcher  
-Kali Linux User
-
->>>>>>> 6ddea4e (Initial release: Android Security Testing GUI)
