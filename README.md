@@ -110,26 +110,25 @@ taxii2-client
 
 ## ⚙️ Installation
 
-### 🐍 Virtual Environment (Recommended)
-
-python3 -m venv venv
-source venv/bin/activate   # Linux / Mac
-# venv\Scripts\activate    # Windows
-pip3 install -r requirements.txt
+## 🐍 Virtual Environment (Recommended)
+     python3 -m venv venv
+    source venv/bin/activate   # Linux / Mac
+    venv\Scripts\activate    # Windows
+    pip3 install -r requirements.txt
 
 ## Direct Installation
-pip3 install PyQt5 qtawesome requests androguard colorama tqdm tabulate paramiko cryptography beautifulsoup4 selenium python-nmap scapy pyshark dnspython lxml xmltodict jsonpath-ng pyyaml jinja2 python-whois ipwhois
+    pip3 install PyQt5 qtawesome requests androguard colorama tqdm tabulate paramiko cryptography beautifulsoup4 selenium python-nmap scapy pyshark dnspython lxml xmltodict jsonpath-ng pyyaml jinja2 python-whois ipwhois
 
 ## Usage
 # Running the Application
 # Navigate to the project directory
-cd AndroidSecurityTesting
+    cd AndroidSecurityTesting
 
 # Run the main application
-python3 src/main.py
+    python3 src/main.py
  ## Module-Specific Usage
  
-    Virus Scanner Tab: Upload files for malware scanning
+  Virus Scanner Tab: Upload files for malware scanning
     Android Analyzer Tab: Analyze APK files for security issues
     Network Scanner Tab: Perform network discovery and scanning
     Web Tools Tab: Conduct web application security testing
@@ -138,20 +137,20 @@ python3 src/main.py
 # Settings File
 The application stores settings in exploitation_settings.json:
 
-    VirusTotal API key for enhanced scanning
+  VirusTotal API key for enhanced scanning
     Default file paths
     Scan preferences
 # API Integration
 To use VirusTotal integration:
 
-    Register at https://www.virustotal.com/
+  Register at https://www.virustotal.com/
     Obtain an API key
     Add the key in the Settings tab
 
 ## Security Features
 # Data Protection
 
-    All scanning is performed locally first
+  All scanning is performed locally first
     API keys are stored securely
     No data uploaded without explicit user consent
     Secure handling of sensitive information
