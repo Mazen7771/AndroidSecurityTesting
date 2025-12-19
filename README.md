@@ -113,8 +113,8 @@ taxii2-client
 ## 🐍 Virtual Environment (Recommended)
      python3 -m venv venv
     source venv/bin/activate   # Linux / Mac
-    venv\Scripts\activate    # Windows
-    pip3 install -r requirements.txt
+  # venv\Scripts\activate    # Windows
+        pip3 install -r requirements.txt
 
 ## Direct Installation
     pip3 install PyQt5 qtawesome requests androguard colorama tqdm tabulate paramiko cryptography beautifulsoup4 selenium python-nmap scapy pyshark dnspython lxml xmltodict jsonpath-ng pyyaml jinja2 python-whois ipwhois
