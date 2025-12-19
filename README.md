@@ -113,7 +113,6 @@ taxii2-client
 ## 🐍 Virtual Environment (Recommended)
      python3 -m venv venv
     source venv/bin/activate   # Linux / Mac
-  # venv\Scripts\activate    # Windows
         pip3 install -r requirements.txt
 
 ## Direct Installation
