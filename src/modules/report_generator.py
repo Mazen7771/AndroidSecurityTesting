@@ -1,13 +1,13 @@
-# src/modules/network_scanner.py
+# src/modules/report_generator.py
 """
-Network Scanner Module
-Placeholder implementation for network scanning functionality
+Report Generator Module
+Placeholder implementation for security report generation
 """
 
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QPushButton, QTextEdit, QGroupBox
 from PyQt5.QtCore import Qt
 
-class NetworkScannerGUI(QWidget):
+class ReportGenerator(QWidget):
     def __init__(self):
         super().__init__()
         self.init_ui()
@@ -15,7 +15,7 @@ class NetworkScannerGUI(QWidget):
     def init_ui(self):
         layout = QVBoxLayout(self)
         
-        title = QLabel("Network Scanner")
+        title = QLabel("Security Report Generator")
         title.setStyleSheet("font-size: 18px; font-weight: bold; margin: 10px;")
         layout.addWidget(title)
         
@@ -24,12 +24,12 @@ class NetworkScannerGUI(QWidget):
         description_layout = QVBoxLayout(description_group)
         
         description = QLabel(
-            "This module provides network scanning capabilities including:\n"
-            "• Host discovery\n"
-            "• Port scanning\n"
-            "• Service detection\n"
-            "• Vulnerability assessment\n\n"
-            "To implement this module, add network scanning functionality here."
+            "This module generates comprehensive security reports including:\n"
+            "• Scan results summary\n"
+            "• Vulnerability assessment\n"
+            "• Recommendations\n"
+            "• Export in multiple formats (PDF, HTML, JSON)\n\n"
+            "To implement this module, add report generation functionality here."
         )
         description.setWordWrap(True)
         description_layout.addWidget(description)
@@ -37,17 +37,17 @@ class NetworkScannerGUI(QWidget):
         layout.addWidget(description_group)
         
         # Example button
-        scan_button = QPushButton("Scan Network")
-        scan_button.setEnabled(False)  # Disabled as this is a placeholder
-        layout.addWidget(scan_button)
+        generate_button = QPushButton("Generate Report")
+        generate_button.setEnabled(False)  # Disabled as this is a placeholder
+        layout.addWidget(generate_button)
         
         # Output area
         output_group = QGroupBox("Output")
         output_layout = QVBoxLayout(output_group)
         
         output = QTextEdit()
-        output.setPlainText("Network Scanner - Placeholder\n\nThis module is not yet implemented.\n"
-                           "When implemented, it will display network scan results here.")
+        output.setPlainText("Report Generator - Placeholder\n\nThis module is not yet implemented.\n"
+                           "When implemented, it will display generated reports here.")
         output.setReadOnly(True)
         output_layout.addWidget(output)
         

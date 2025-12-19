@@ -1,0 +1,51 @@
+# install.py
+
+import subprocess
+import sys
+import os
+
+def install_package(package):
+    """Install a Python package using pip"""
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+        print(f"Successfully installed {package}")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to install {package}: {e}")
+        return False
+
+def main():
+    print("Installing Android Security Testing Framework dependencies...")
+    
+    # Core dependencies (required)
+    required_packages = [
+        "PyQt5>=5.15.0"
+    ]
+    
+    # Optional dependencies (recommended)
+    optional_packages = [
+        "qtawesome>=1.0.0",
+        "requests>=2.25.0"
+    ]
+    
+    # Install required packages
+    print("\nInstalling required packages...")
+    for package in required_packages:
+        install_package(package)
+    
+    # Install optional packages
+    print("\nInstalling optional packages (recommended)...")
+    for package in optional_packages:
+        install_package(package)
+    
+    # Ask user about androguard
+    print("\nFor full Android APK analysis capabilities, you can also install androguard.")
+    choice = input("Do you want to install androguard? (y/n): ").lower()
+    if choice in ['y', 'yes']:
+        install_package("androguard>=3.3.5")
+    
+    print("\nInstallation complete! You can now run the application with:")
+    print("python3 src/main.py")
+
+if __name__ == "__main__":
+    main()
