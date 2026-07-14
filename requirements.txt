@@ -17,6 +17,20 @@ jsonpath-ng
 pyyaml
 jinja2
 python-whois
+# Network Scanner module dependencies
+PyQt5>=5.15,<6
+python-nmap>=0.7.1
+requests>=2.31
+
+# System dependency (not pip-installable):
+#   nmap must be installed and on PATH.
+#   Debian/Ubuntu: sudo apt install nmap
+#   macOS:         brew install nmap
+#   Windows:       https://nmap.org/download.html
+
+# Optional: set NVD_API_KEY as an environment variable to raise the
+# CVE-lookup rate limit from 5 req/30s to 50 req/30s.
+# Get a free key at: https://nvd.nist.gov/developers/request-an-api-key
 ipwhois
 pyOpenSSL
 cryptography
